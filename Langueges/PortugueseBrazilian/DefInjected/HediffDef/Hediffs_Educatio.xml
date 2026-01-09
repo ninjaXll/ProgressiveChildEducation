@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <PE_EducationLevel.label>Nível Educacional</PE_EducationLevel.label>
+  <PE_EducationLevel.description>O nível de desenvolvimento cognitivo e técnico deste indivíduo.</PE_EducationLevel.description>
+  
+  <PE_EducationLevel.stages.0.label>aprendizado inicial</PE_EducationLevel.stages.0.label>
+  <PE_EducationLevel.stages.1.label>estudante básico</PE_EducationLevel.stages.1.label>
+  <PE_EducationLevel.stages.2.label>estudante avançado</PE_EducationLevel.stages.2.label>
+  <PE_EducationLevel.stages.3.label>educação completa</PE_EducationLevel.stages.3.label>
+</LanguageData>

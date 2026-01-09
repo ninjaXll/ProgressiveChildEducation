@@ -1,0 +1,9 @@
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Assemblies\ProgressiveChildEducation.dll
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Assemblies\ProgressiveChildEducation.pdb
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.csproj.AssemblyReference.cache
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.AssemblyInfoInputs.cache
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.AssemblyInfo.cs
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.csproj.CoreCompileInputs.cache
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.dll
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.pdb

@@ -1,0 +1,22 @@
+<Defs>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PE_InfantDesk</defName>
+    <label>mesa de aprendizado infantil</label>
+    <description>Uma mesa pequena dedicada ao aprendizado inicial.</description>
+    <designationCategory>PE_EducationCategory</designationCategory> <graphicData>
+      <texPath>Things/Building/Furniture/TableShort</texPath> <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <stuffCategories><li>Woody</li><li>Stony</li><li>Metallic</li></stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>10</Mass>
+    </statBases>
+    <comps>
+       <li Class="CompProperties_Forbiddable"/> 
+    </comps>
+  </ThingDef>
+</Defs>

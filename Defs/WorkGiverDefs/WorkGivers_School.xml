@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>PE_StudentGoToSchool</defName>
+    <label>ir para a escola</label>
+    <giverClass>ProgressiveChildEducation.WorkGiver_AttendClass</giverClass>
+    <workType>BasicWorker</workType> <priorityInType>100</priorityInType> <verb>estudar</verb>
+    <gerund>estudando</gerund>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>PE_TeacherGoToSchool</defName>
+    <label>ensinar turma</label>
+    <giverClass>ProgressiveChildEducation.WorkGiver_TeachClass</giverClass>
+    <workType>BasicWorker</workType>
+    <priorityInType>90</priorityInType>
+    <verb>ensinar</verb>
+    <gerund>ensinando</gerund>
+  </WorkGiverDef>
+</Defs>

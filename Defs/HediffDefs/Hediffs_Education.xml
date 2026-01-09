@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>PE_EducationLevel</defName>
+    <label>education level</label>
+    <description>The level of cognitive and technical development.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <stages>
+      <li>
+        <label>early learning</label>
+        <minSeverity>0.0</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>-0.50</GlobalLearningFactor>
+          <WorkSpeedGlobal>-0.40</WorkSpeedGlobal>
+        </statOffsets>
+        <capMods>
+            <li><capacity>Manipulation</capacity><setMax>0.8</setMax></li>
+        </capMods>
+      </li>
+      <li>
+        <label>basic student</label>
+        <minSeverity>0.3</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>-0.20</GlobalLearningFactor>
+          <WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <label>advanced student</label>
+        <minSeverity>0.7</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>0.0</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+      <li>
+        <label>fully educated</label>
+        <minSeverity>1.0</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>0.10</GlobalLearningFactor>
+          <ResearchSpeed>0.05</ResearchSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

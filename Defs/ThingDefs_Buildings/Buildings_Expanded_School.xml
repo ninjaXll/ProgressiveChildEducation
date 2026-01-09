@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PE_LessonStone</defName>
+    <label>pedra de lição</label>
+    <description>Uma superfície irregular para aprendizado básico. Velocidade lenta.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Building/Furniture/TableStone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PE_SchoolDesk</defName>
+    <label>mesa escolar</label>
+    <description>Uma mesa padrão para estudantes.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Building/Furniture/TableShort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <stuffCategories><li>Woody</li><li>Metallic</li></stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <researchPrerequisites><li>PE_BasicSchoolTech</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PE_TouchscreenDesk</defName>
+    <label>mesa touchscreen</label>
+    <description>Aprendizado acelerado com interface digital.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Building/Furniture/TableShort</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <color>(100,200,255)</color>
+    </graphicData>
+    <size>(1,1)</size>
+    <costList><Steel>30</Steel><ComponentIndustrial>2</ComponentIndustrial></costList>
+    <researchPrerequisites><li>PE_HoloSchoolTech</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_MeleeDummy</defName>
+    <label>boneco de treino</label>
+    <description>Treina habilidade corpo a corpo durante a aula.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Parka/Parka_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <stuffCategories><li>Leathery</li><li>Fabric</li></stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <researchPrerequisites><li>PE_BasicSchoolTech</li></researchPrerequisites>
+    <pathCost>50</pathCost>
+    <passability>PassThroughOnly</passability>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_ShootingStation</defName>
+    <label>alvo de arquearia/tiro</label>
+    <description>Treina habilidade de tiro durante a aula.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Building/Security/Barricade_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <costList><WoodLog>20</WoodLog></costList>
+    <researchPrerequisites><li>PE_BasicSchoolTech</li></researchPrerequisites>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_CadaverDummy</defName>
+    <label>simulador de cirurgia</label>
+    <description>Treina medicina.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+    <costList><Cloth>50</Cloth><MedicineHerbal>5</MedicineHerbal></costList>
+    <researchPrerequisites><li>PE_ModernSchoolTech</li></researchPrerequisites>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+  </ThingDef>
+  
+  <ThingDef ParentName="FurnitureBase">
+    <defName>PE_Blackboard</defName>
+    <label>quadro negro</label>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData><texPath>Things/Building/Misc/WeddingSpot</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(2,1)</drawSize></graphicData>
+    <size>(2,1)</size>
+    <costList><WoodLog>30</WoodLog></costList>
+    <researchPrerequisites><li>PE_BasicSchoolTech</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_Projector</defName>
+    <label>projetor</label>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData><texPath>Things/Building/Security/TurretMini_Base</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1,1)</drawSize></graphicData>
+    <size>(1,1)</size>
+    <costList><Steel>50</Steel><ComponentIndustrial>1</ComponentIndustrial></costList>
+    <researchPrerequisites><li>PE_ModernSchoolTech</li></researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_HoloScreen</defName>
+    <label>tela holográfica</label>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    <graphicData><texPath>Things/Building/Misc/TvFlat</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(2,1)</drawSize><color>(0,255,255)</color></graphicData>
+    <size>(2,1)</size>
+    <costList><Steel>50</Steel><ComponentSpacer>1</ComponentSpacer></costList>
+    <researchPrerequisites><li>PE_HoloSchoolTech</li></researchPrerequisites>
+  </ThingDef>
+</Defs>

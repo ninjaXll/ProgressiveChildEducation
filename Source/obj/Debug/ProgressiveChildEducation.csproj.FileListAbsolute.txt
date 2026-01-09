@@ -7,3 +7,4 @@ C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducat
 C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.csproj.CoreCompileInputs.cache
 C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.dll
 C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.pdb
+C:\Users\zait2\OneDrive\Área de Trabalho\Criador de MODS\ProgressiveChildEducation\Source\obj\Debug\ProgressiveChildEducation.sourcelink.json

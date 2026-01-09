@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <MainTabDef>
+    <defName>PE_SchoolTab</defName>
+    <label>Escola</label>
+    <description>Gerencie turmas, professores e alunos.</description>
+    <tabWindowClass>ProgressiveChildEducation.MainTabWindow_School</tabWindowClass>
+    <order>45</order> </MainTabDef>
+</Defs>

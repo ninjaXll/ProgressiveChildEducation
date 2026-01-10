@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Educação Progressiva Infantil</name>
-  <author>SeuNome</author>
-  <packageId>User.ProgressiveChildEducation</packageId>
+  <author>Ninjax</author>
+  <packageId>NinjaX.ProgressiveChildEducation</packageId>
+  
   <supportedVersions>
-    <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
-  <description>Reformula o sistema de aprendizado. Crianças precisam aprender, adultos já sabem trabalhar. Pesquisa é exclusiva para maiores de idade.</description>
+  
+  <description>
+EDUCAÇÃO PROGRESSIVA INFANTIL
+=============================
+
+Uma reformulação completa do sistema educacional do RimWorld, adicionando gerenciamento de turmas, novas mobílias e métodos de ensino prático.
+
+CARACTERÍSTICAS PRINCIPAIS:
+
+🎓 GERENCIAMENTO ESCOLAR
+- Nova aba "Escola": Crie turmas, defina horários de aula e atribua professores e alunos.
+- Rotina Realista: As crianças param suas atividades para ir à aula no horário definido.
+- Interface Visual: Acompanhe o progresso educacional de cada aluno com barras de nível coloridas.
+
+🪑 NOVAS ESTRUTURAS E MOBÍLIA
+- Progressão Tecnológica: Comece com "Pedras de Lição" tribais, evolua para "Mesas Escolares" industriais e alcance a "Mesa Touchscreen" spacer.
+- Decoração Funcional: Quadros negros, projetores e telas holográficas para compor a sala de aula.
+
+⚔️ TREINAMENTO DE HABILIDADES
+- Boneco de Treino: Ensina combate corpo a corpo (Melee) durante a aula.
+- Estação de Tiro: Alvos básicos para treino de arquearia e tiro.
+- Alvo Reativo Holográfico: Tecnologia avançada para treino intensivo com armas de fogo modernas.
+- Simulador Médico: Manequim anatômico para ensino de medicina e cirurgia.
+
+🔬 PESQUISAS
+- Árvore de pesquisa própria com níveis: Tecnologia Escolar Básica, Moderna e Holográfica.
+
+-----------------------------
+REQUISITOS:
+- Harmony
+- DLC Biotech
+  </description>
+  
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
       <displayName>Harmony</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
     </li>
     <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
       <displayName>Biotech</displayName>
     </li>
   </modDependencies>
+  
   <loadAfter>
-    <li>Ludeon.RimWorld</li>
-    <li>Ludeon.RimWorld.Biotech</li>
     <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld.Biotech</li>
   </loadAfter>
 </ModMetaData>

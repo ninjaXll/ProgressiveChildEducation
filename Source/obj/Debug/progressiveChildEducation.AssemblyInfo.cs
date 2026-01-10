@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProgressiveChildEducation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7f869aa89dc9097a248b290f5c921ccd1927517")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f3836ece69b2c01e5057224e000c59ab5b71f91")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProgressiveChildEducation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProgressiveChildEducation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,24 +9,31 @@ namespace ProgressiveChildEducation
     {
         public static void Postfix(Pawn ___pawn)
         {
-            // Verificação de segurança
+            // PROTEÇÃO TOTAL: Se qualquer coisa for nula, cancela imediatamente
             if (___pawn == null || ___pawn.CurJob == null || ___pawn.CurJob.def == null) return;
+            if (___pawn.health == null || ___pawn.health.hediffSet == null) return;
 
-            // CORREÇÃO: Pegamos o nome do Job como texto para evitar erro de referência
-            string jobName = ___pawn.CurJob.def.defName;
-
-            // "LessonTaking" é o nome interno da tarefa de estudar
-            if (jobName == "LessonTaking" || jobName == "Lessongiving")
+            try 
             {
-                var hediffDef = DefDatabase<HediffDef>.GetNamed("PE_EducationLevel", false);
-                if (hediffDef == null) return;
+                string jobName = ___pawn.CurJob.def.defName;
 
-                var hediff = ___pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
-                
-                if (hediff != null && hediff.Severity < 1.0f)
+                if (jobName == "LessonTaking" || jobName == "Lessongiving")
                 {
-                    hediff.Severity += 0.0003f;
+                    var hediffDef = DefDatabase<HediffDef>.GetNamed("PE_EducationLevel", false);
+                    if (hediffDef != null)
+                    {
+                        var hediff = ___pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
+                        // Verifica se hediff existe e não está cheio
+                        if (hediff != null && hediff.Severity < 1.0f)
+                        {
+                            hediff.Severity += 0.0003f;
+                        }
+                    }
                 }
+            }
+            catch
+            {
+                // Se der erro, ignora silenciosamente para não quebrar o Cronograma
             }
         }
     }

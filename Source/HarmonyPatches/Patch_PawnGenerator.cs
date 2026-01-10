@@ -9,23 +9,33 @@ namespace ProgressiveChildEducation
     {
         public static void Postfix(Pawn __result)
         {
-            if (__result == null || !__result.RaceProps.Humanlike || __result.health == null) return;
+            // Se o peão não foi gerado ou não é humano, sai fora
+            if (__result == null || __result.RaceProps == null || !__result.RaceProps.Humanlike) return;
+            if (__result.health == null || __result.ageTracker == null) return;
 
-            var hediffDef = DefDatabase<HediffDef>.GetNamed("PE_EducationLevel");
-            
-            // Lógica para Adultos (Baseado na raça)
-            if (__result.ageTracker.Adult)
+            try
             {
-                var education = __result.health.AddHediff(hediffDef);
-                education.Severity = 1.0f;
+                var hediffDef = DefDatabase<HediffDef>.GetNamed("PE_EducationLevel", false);
+                if (hediffDef == null) return;
+                
+                // Evita adicionar o hediff se já tiver
+                if (__result.health.hediffSet.HasHediff(hediffDef)) return;
+
+                if (__result.ageTracker.Adult)
+                {
+                    var education = __result.health.AddHediff(hediffDef);
+                    education.Severity = 1.0f;
+                }
+                else
+                {
+                    float progress = __result.ageTracker.AgeBiologicalYearsFloat / __result.ageTracker.AdultMinAge;
+                    var education = __result.health.AddHediff(hediffDef);
+                    education.Severity = UnityEngine.Mathf.Clamp(progress, 0.1f, 0.7f);
+                }
             }
-            // Lógica para Crianças Geradas (Invasores/Refugiados)
-            else
+            catch
             {
-                float progress = __result.ageTracker.AgeBiologicalYearsFloat / __result.ageTracker.AdultMinAge;
-                var education = __result.health.AddHediff(hediffDef);
-                // Garante que não venham zerados se já tiverem alguma idade
-                education.Severity = UnityEngine.Mathf.Clamp(progress, 0.1f, 0.7f);
+                // Ignora erros na geração para não travar o jogo
             }
         }
     }

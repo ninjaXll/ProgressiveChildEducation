@@ -13,15 +13,41 @@ namespace ProgressiveChildEducation
         {
             base.SpawnSetup(map, respawningAfterLoad);
             
-            // Definições baseadas no XML (defName)
+            // --- Mesas de Estudo ---
             if (this.def.defName == "PE_LessonStone") learningFactor = 0.7f;
-            if (this.def.defName == "PE_TouchscreenDesk") learningFactor = 1.8f;
+            if (this.def.defName == "PE_SchoolDesk") learningFactor = 1.0f;
+            if (this.def.defName == "PE_TouchscreenDesk") learningFactor = 1.5f;
             if (this.def.defName == "PE_HoloScreen") learningFactor = 2.0f;
             
-            // Estações de Habilidade
-            if (this.def.defName == "PE_CadaverDummy") { skillToTeach = SkillDefOf.Medicine; learningFactor = 1.2f; }
-            if (this.def.defName == "PE_ShootingStation") { skillToTeach = SkillDefOf.Shooting; learningFactor = 1.2f; }
-            if (this.def.defName == "PE_MeleeDummy") { skillToTeach = SkillDefOf.Melee; learningFactor = 1.2f; }
+            // --- Treino Físico ---
+            if (this.def.defName == "PE_MeleeDummy") 
+            { 
+                skillToTeach = SkillDefOf.Melee; 
+                learningFactor = 1.2f; 
+            }
+
+            // --- Treino de Tiro ---
+            
+            // Estação de Arco (Madeira - Básica)
+            if (this.def.defName == "PE_ShootingStation") 
+            { 
+                skillToTeach = SkillDefOf.Shooting; 
+                learningFactor = 1.2f; 
+            }
+
+            // Alvo Reativo (Spacer - Avançado)
+            if (this.def.defName == "PE_ReactiveTarget")  
+            { 
+                skillToTeach = SkillDefOf.Shooting; 
+                learningFactor = 1.8f; // Ensina quase o dobro da velocidade
+            }
+
+            // --- Medicina ---
+            if (this.def.defName == "PE_CadaverDummy") 
+            { 
+                skillToTeach = SkillDefOf.Medicine; 
+                learningFactor = 1.3f; 
+            }
         }
 
         public bool IsUsable()

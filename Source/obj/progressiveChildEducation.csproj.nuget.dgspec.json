@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\ProgressiveChildEducation.csproj": {}
+    "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\progressiveChildEducation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\ProgressiveChildEducation.csproj": {
+    "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\progressiveChildEducation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\ProgressiveChildEducation.csproj",
+        "projectUniqueName": "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\progressiveChildEducation.csproj",
         "projectName": "ProgressiveChildEducation",
-        "projectPath": "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\ProgressiveChildEducation.csproj",
+        "projectPath": "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\progressiveChildEducation.csproj",
         "packagesPath": "C:\\Users\\zait2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\zait2\\OneDrive\\Área de Trabalho\\Criador de MODS\\ProgressiveChildEducation\\Source\\obj\\",
         "projectStyle": "PackageReference",

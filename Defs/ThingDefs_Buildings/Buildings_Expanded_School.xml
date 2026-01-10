@@ -138,4 +138,41 @@
     <costList><Steel>50</Steel><ComponentSpacer>1</ComponentSpacer></costList>
     <researchPrerequisites><li>PE_HoloSchoolTech</li></researchPrerequisites>
   </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PE_ReactiveTarget</defName>
+    <label>alvo reativo holográfico</label>
+    <description>Um sistema de treinamento avançado para armas de fogo. Placas de polímero registram impactos e se regeneram, permitindo treino intensivo com rifles e armas de energia.</description>
+    <thingClass>ProgressiveChildEducation.Building_SchoolDesk</thingClass>
+    <designationCategory>PE_EducationCategory</designationCategory>
+    
+    <graphicData>
+      <texPath>Buildings/ReactiveTarget</texPath> <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <passability>PassThroughOnly</passability>
+    
+    <costList>
+      <Steel>50</Steel>
+      <ComponentSpacer>1</ComponentSpacer> </costList>
+    
+    <researchPrerequisites><li>PE_HoloSchoolTech</li></researchPrerequisites>
+    
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset> <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(100,200,255,0)</glowColor> </li>
+    </comps>
+  </ThingDef>
 </Defs>

@@ -6,6 +6,7 @@ namespace ProgressiveChildEducation
 {
     public class SchoolClass : IExposable
     {
+        // Define valores padrão seguros
         public string className = "Nova Turma";
         public Pawn teacher;
         public List<Pawn> students = new List<Pawn>();
@@ -14,11 +15,21 @@ namespace ProgressiveChildEducation
         
         public void ExposeData()
         {
-            Scribe_Values.Look(ref className, "className");
+            // PROTEÇÃO 1: Valores padrão (defaultValue)
+            // Se o save não tiver o nome (save antigo/novo mod), ele usa "Nova Turma" em vez de nulo.
+            Scribe_Values.Look(ref className, "className", "Nova Turma");
+            
             Scribe_References.Look(ref teacher, "teacher");
+            
+            // Salva a lista de referências
             Scribe_Collections.Look(ref students, "students", LookMode.Reference);
+            
             Scribe_Values.Look(ref startHour, "startHour", 8);
             Scribe_Values.Look(ref duration, "duration", 4);
+
+            // PROTEÇÃO 2: Garantia de Lista
+            // Se a lista vier nula do save, recria uma vazia para não dar erro de "NullReference" depois.
+            if (students == null) students = new List<Pawn>();
         }
     }
 
@@ -31,9 +42,12 @@ namespace ProgressiveChildEducation
         public override void ExposeData()
         {
             Scribe_Collections.Look(ref classes, "schoolClasses", LookMode.Deep);
+            
+            // PROTEÇÃO 3: Garantia da Lista Principal
             if (classes == null) classes = new List<SchoolClass>();
         }
 
-        public static SchoolManager Current => Verse.Current.Game.GetComponent<SchoolManager>();
+        // Acesso seguro ao componente
+        public static SchoolManager Current => Verse.Current.Game?.GetComponent<SchoolManager>();
     }
 }

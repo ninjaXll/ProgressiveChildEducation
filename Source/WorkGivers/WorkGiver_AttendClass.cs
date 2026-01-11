@@ -10,6 +10,11 @@ namespace ProgressiveChildEducation
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            // --- PROTEÇÃO DE SEGURANÇA (NOVA) ---
+            // Impede erros vermelhos se o SchoolManager ainda não tiver carregado (comum ao carregar saves)
+            if (SchoolManager.Current == null || SchoolManager.Current.classes == null) return false;
+            // ------------------------------------
+
             if (!t.Spawned || t.IsForbidden(pawn) || !pawn.CanReserve(t)) return false;
 
             var turma = SchoolManager.Current.classes.Find(c => c.students.Contains(pawn));
@@ -23,6 +28,9 @@ namespace ProgressiveChildEducation
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            // Proteção extra aqui também, só para garantir
+            if (SchoolManager.Current == null || SchoolManager.Current.classes == null) return null;
+
             var turma = SchoolManager.Current.classes.Find(c => c.students.Contains(pawn));
             return JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("PE_AttendClass"), t, turma?.teacher);
         }

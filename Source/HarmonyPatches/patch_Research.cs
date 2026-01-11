@@ -9,16 +9,14 @@ namespace ProgressiveChildEducation
     {
         public static void Postfix(Pawn pawn, ref bool __result)
         {
-            if (__result) return; // Se já foi pulado, ignora.
+            if (__result) return; 
 
-            // Se não for adulto, força o skip (bloqueia a tarefa)
+            // Se não for adulto, força o skip
             if (pawn.ageTracker != null && !pawn.ageTracker.Adult)
             {
                 __result = true;
             }
         }
     }
-    
-    // AQUI TINHA O CÓDIGO DO "SetPriority". 
-    // CERTIFIQUE-SE DE QUE ELE FOI APAGADO E NÃO EXISTE MAIS NADA AQUI EMBAIXO!
+    // APAGUE TUDO O QUE TIVER DAQUI PARA BAIXO!
 }

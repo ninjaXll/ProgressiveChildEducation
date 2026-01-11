@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <MainTabDef>
+  <MainButtonDef>
     <defName>PE_SchoolTab</defName>
     <label>Escola</label>
     <description>Gerencie turmas, professores e alunos.</description>
     <tabClass>ProgressiveChildEducation.MainTabWindow_School</tabClass>
     <order>550</order>
-  </MainTabDef>
+  </MainButtonDef>
 </Defs>

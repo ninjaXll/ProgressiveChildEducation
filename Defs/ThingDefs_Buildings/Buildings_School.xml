@@ -11,9 +11,9 @@
     <stuffCategories><li>Woody</li><li>Stony</li><li>Metallic</li></stuffCategories>
     <costStuffCount>40</costStuffCount>
     <statBases>
+      <Mass>10</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>1000</WorkToBuild>
-      <Mass>10</Mass>
     </statBases>
     <comps>
        <li Class="CompProperties_Forbiddable"/> 

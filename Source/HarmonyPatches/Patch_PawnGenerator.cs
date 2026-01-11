@@ -9,8 +9,14 @@ namespace ProgressiveChildEducation
     {
         public static void Postfix(Pawn __result)
         {
-            // Se o peão não foi gerado ou não é humano, sai fora
+            // PROTEÇÃO 1: Peão nulo ou não humano
             if (__result == null || __result.RaceProps == null || !__result.RaceProps.Humanlike) return;
+
+            // PROTEÇÃO 2 (Nova): Só aplica em Colonos.
+            // Evita bugs com visitantes, inimigos e pawns temporários que não precisam de educação.
+            if (!__result.IsColonist) return;
+
+            // PROTEÇÃO 3: Dados inválidos
             if (__result.health == null || __result.ageTracker == null) return;
 
             try
@@ -18,7 +24,6 @@ namespace ProgressiveChildEducation
                 var hediffDef = DefDatabase<HediffDef>.GetNamed("PE_EducationLevel", false);
                 if (hediffDef == null) return;
                 
-                // Evita adicionar o hediff se já tiver
                 if (__result.health.hediffSet.HasHediff(hediffDef)) return;
 
                 if (__result.ageTracker.Adult)
@@ -35,7 +40,7 @@ namespace ProgressiveChildEducation
             }
             catch
             {
-                // Ignora erros na geração para não travar o jogo
+                // Ignora erros silenciosamente na geração
             }
         }
     }
